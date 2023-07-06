@@ -8,7 +8,7 @@ const axios = require("axios");
 const app = express();
 
 const allowedOrigins = [
-    "https://backend-rjnw.onrender.com",
+    "https://earthquake-visualization-1raf.vercel.app",
     "http://localhost:3000"
 ];
 
