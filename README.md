@@ -7,12 +7,11 @@ The objective of this project is to develop a system that can fetch earthquake d
 
 - Fetch earthquake data from the API provided: `https://data.bmkg.go.id/DataMKG/TEWS/gempadirasakan.json`
 - Extract required fields (e.g., latitude, longitude, magnitude, location, DateTime, region) from the JSON data
-- Store the data in either a file (GeoJSON format) or a database (with a suitable data model)
+- Store the data in a database (with a suitable data model)
 - Develop an API service to fetch the stored earthquake data in GeoJSON format
-- Use a visualization library like Leaflet.js or Mapbox GLJS to display the earthquake data on a map
+- Use a visualization library like Leaflet.js to display the earthquake data on a map
 
 ## Getting Started
-
 To get started with the project, follow these steps:
 
 1. Clone the repository:
@@ -21,35 +20,26 @@ git clone https://github.com/Ssravani272/earthquake-visualization.git
 
 2. Install the necessary dependencies:
 
-# Install dependencies for the backend/API service
-npm install
+# Install dependencies for the backend /API service
+Run this command in the backend folder to install dependencies.
+  -npm install
+
+create a .env file in the backend folder 
+Create two variables DATABASE_URL and PORT_NUMBER in the .env file.
+Give your database connection URL to DATABASE_URL and your connection port number to PORT_NUMBER.
+
+#Run the backend server by 
+- node app.js
 
 # Install frontend dependencies
-npm install
+Run this command in the app folder to install frontend  dependencies.
+ -npm install
 
-#Configure the project:
+ Now create a .env file in the app folder 
+Create a variable named REACT_APP_API_URL and give your backend localhost URL to this variable.
 
- database storage:
-  - Configure the database connection and create the necessary tables/collections.
-
-#Fetch and transform the earthquake data:
-
-- Implement the logic to fetch the earthquake data from the API.
-- Transform the JSON data to extract the required fields and create a structured representation of the earthquake events.
-
-#Store the data:
-
- database storage:
-  - Store the transformed data in the configured database.
-
-#Develop the API service:
-
-- Create an API endpoint that retrieves the earthquake data from the storage (file or database) and returns the response in GeoJSON format.
-
-#Visualization:
-- Use a suitable visualization library (e.g., Leaflet.js, Mapbox GLJS) to render the earthquake data on a map.
-- Plot the earthquake events on the map using their latitude and longitude coordinates.
-- Add interactive features to display additional information when a marker is clicked.
+#Run the frontend app by
+- npm start
 
 ## Contributing
 
