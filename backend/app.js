@@ -7,9 +7,14 @@ const axios = require("axios");
 
 const app = express();
 
+const allowedOrigins = [
+    "https://backend-rjnw.onrender.com",
+    "http://localhost:3000"
+];
+
 app.use(
     cors({
-        origin: "http://localhost:3000",
+        origin: allowedOrigins,
     })
 );
 app.use(express.json());
