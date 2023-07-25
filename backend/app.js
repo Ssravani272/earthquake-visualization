@@ -36,12 +36,13 @@ mongoose
                     // Prepare new data for saving
                     const dataPromises = apiData.map(async (x) => {
                         const filter = { DateTime: x.DateTime, Region: x.Wilayah };
+                        const coordinates = x.Coordinates.split(',');
                         const update = { 
                             DateTime: x.DateTime, 
                             Region: x.Wilayah, 
                             Magnitude: x.Magnitude, 
-                            Latitude: x.Lintang, 
-                            Longtitude: x.Bujur 
+                            Latitude: coordinates[0], 
+                            Longtitude: coordinates[1]
                         };
 
                         // Update the data if it exists already, else create a new document
